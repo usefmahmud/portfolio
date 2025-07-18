@@ -15,7 +15,11 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${madeTommyFamily.variable} antialiased`}>
-        {children}
+        <div className='flex h-screen flex-col px-10'>
+          <div className='border-foreground h-full w-full border-5'>
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );
