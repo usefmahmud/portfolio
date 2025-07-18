@@ -6,9 +6,10 @@ import React, { useEffect } from 'react';
 type THEME = 'light' | 'dark';
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = React.useState<THEME>(
-    (localStorage.getItem('theme') as THEME) || 'dark'
-  );
+  const [theme, setTheme] = React.useState<THEME>(() => {
+    if (typeof window === 'undefined') return 'light';
+    return (localStorage.getItem('theme') as THEME) || 'light';
+  });
 
   const toggleTheme = () => {
     setTheme((newTheme) => {
@@ -28,7 +29,7 @@ const ThemeToggle = () => {
       className='border-foreground relative flex cursor-pointer overflow-hidden border-5 *:px-4 *:text-[32px] *:font-semibold *:transition-transform *:duration-150 *:ease-in-out'
       role='button'
       tabIndex={0}
-      aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
+      aria-label={`Switch theme`}
       onClick={() => toggleTheme()}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
