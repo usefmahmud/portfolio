@@ -17,12 +17,10 @@ const Navbar = () => {
                 <NavbarItem key={item.path} item={item} />
 
                 {index !== ROUTES.length - 1 && (
-                  <li className='list-none' aria-hidden='true'>
-                    <span
-                      className='bg-foreground size-3 rounded-full'
-                      role='presentation'
-                    ></span>
-                  </li>
+                  <span
+                    className='bg-foreground size-3 rounded-full'
+                    role='presentation'
+                  ></span>
                 )}
               </React.Fragment>
             );
