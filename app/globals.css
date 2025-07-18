@@ -1,8 +1,8 @@
 @import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #e1e1e1;
+  --foreground: #181818;
 }
 
 @theme inline {
@@ -12,10 +12,12 @@
   --font-made-tommy: var(--font-made-tommy);
 }
 
+@custom-variant dark (&:is(.dark *));
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #181818;
+    --foreground: #e1e1e1;
   }
 }
 
