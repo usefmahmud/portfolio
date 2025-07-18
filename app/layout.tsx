@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { madeTommyFamily } from '@/lib/fonts';
 import Header from '@/components/layout/header';
+import Navbar from '@/components/layout/navbar';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -21,6 +22,7 @@ export default function RootLayout({
           <div className='border-foreground h-full w-full border-5'>
             {children}
           </div>
+          <Navbar />
         </div>
       </body>
     </html>

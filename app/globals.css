@@ -21,6 +21,12 @@
   }
 }
 
+@layer base {
+  .navbar-link-underline {
+    @apply after:bg-foreground relative text-[32px] font-medium after:absolute after:-bottom-2 after:left-0 after:h-[6px] after:w-0 after:content-[""] hover:after:w-full;
+  }
+}
+
 body {
   @apply bg-background text-foreground font-made-tommy;
 }
