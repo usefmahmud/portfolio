@@ -31,7 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${madeTommyFamily.variable} antialiased`}>
+      <body
+        className={`${madeTommyFamily.variable} overflow-hidden antialiased`}
+      >
         <div className='flex h-screen flex-col px-10'>
           <Header />
           <div className='border-foreground h-full w-full border-5'>
