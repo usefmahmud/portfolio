@@ -14,13 +14,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #181818;
-    --foreground: #e1e1e1;
-  }
+.dark {
+  --background: #181818;
+  --foreground: #e1e1e1;
 }
-
 @layer base {
   .navbar-link-underline {
     @apply after:bg-foreground relative text-[32px] font-medium after:absolute after:-bottom-2 after:left-0 after:h-[6px] after:w-0 after:content-[""] hover:after:w-full;
