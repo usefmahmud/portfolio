@@ -1,4 +1,5 @@
 import React from 'react';
+import ThemeToggle from './theme-toggle';
 
 const Header = () => {
   return (
@@ -14,6 +15,8 @@ const Header = () => {
           <span itemProp='familyName'>MAHMOUD</span>
         </h1>
       </div>
+
+      <ThemeToggle />
     </header>
   );
 };
