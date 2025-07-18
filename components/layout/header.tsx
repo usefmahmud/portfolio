@@ -2,11 +2,19 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <div className='flex justify-between py-3'>
+    <header className='flex justify-between py-3' role='banner'>
       <div>
-        <h1 className='text-[40px] font-black select-none'>YOUSEF MAHMOUD</h1>
+        <h1
+          className='flex gap-3 text-[40px] font-black select-none'
+          itemProp='name'
+          itemScope
+          itemType='https://schema.org/Person'
+        >
+          <span itemProp='givenName'>YOUSEF</span>
+          <span itemProp='familyName'>MAHMOUD</span>
+        </h1>
       </div>
-    </div>
+    </header>
   );
 };
 
