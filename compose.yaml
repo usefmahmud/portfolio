@@ -1,0 +1,19 @@
+services:
+  portfolio:
+    image: portfolio:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      PORT: 7001
+    restart: unless-stopped
+    init: true
+    networks:
+      - shared
+
+networks:
+  shared:
+    external: true
