@@ -17,9 +17,7 @@ jobs:
 
       - name: Create .env file from GitHub variables
         run: |
-          cat << 'EOF' > .env
-          ${{ secrets.APP_ENV }}
-          EOF
+          printf '%s\n' '${{ secrets.APP_ENV }}' > .env
           echo "COMPOSE_PROJECT_NAME=${{ env.REPO_NAME }}" >> .env
 
       - name: Build and deploy with Docker Compose
