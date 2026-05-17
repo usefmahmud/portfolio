@@ -5,15 +5,8 @@
     {
       "idx": 0,
       "version": "7",
-      "when": 1779028822842,
-      "tag": "0000_ambiguous_spyke",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "7",
-      "when": 1779059679468,
-      "tag": "0001_omniscient_jack_power",
+      "when": 1779060436243,
+      "tag": "0000_lyrical_cyclops",
       "breakpoints": true
     }
   ]
