@@ -15,13 +15,12 @@ services:
       - shared
 
   migrate:
-    build:
-      context: .
-      dockerfile: Dockerfile.migrate
+    image: portfolio:latest
     env_file:
       - .env
     environment:
       DATABASE_URL: postgres://${DB_USER}:${DB_PASSWORD}@postgres:5432/${DB_NAME}
+    command: npx drizzle-kit migrate
     depends_on:
       - postgres
     networks:
