@@ -28,4 +28,6 @@ jobs:
           docker compose up -d
 
       - name: Run database migrations
-        run: docker compose run --rm migrate
+        run: |
+          sleep 5
+          docker compose exec portfolio npx drizzle-kit migrate
