@@ -1,0 +1,12 @@
+FROM node:22-alpine
+WORKDIR /app
+RUN apk add --no-cache libc6-compat
+
+COPY package.json package-lock.json* ./
+RUN npm ci
+
+COPY drizzle.config.ts ./
+COPY db/migrations ./db/migrations
+COPY db/schema.ts ./db/schema.ts
+
+CMD ["npx", "drizzle-kit", "migrate"]
